@@ -6,6 +6,19 @@ public class Biggest
 {
     public static int getBig(int[][] m)
     {
-		return -1;
+		int inital = m[0][0];
+
+        for(int i = 0; i < m.length; i++)
+        {
+            for(int c = 0; c < m[i].length; c++)
+            {
+                if(m[i][c] > inital)
+                {
+                    inital = m[i][c];
+                }
+            }
+        }
+
+        return inital;
     }
 }
